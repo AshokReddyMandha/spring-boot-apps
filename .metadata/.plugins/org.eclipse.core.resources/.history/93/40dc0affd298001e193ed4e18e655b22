@@ -1,0 +1,38 @@
+package com.ashokit.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ashokit.entity.Book;
+import com.ashokit.entity.BookPK;
+import com.ashokit.repo.BookRepo;
+
+@Service
+public class BookService {
+
+	@Autowired
+	private BookRepo bookRepo;
+
+	public void saveBook() {
+		BookPK pk = new BookPK();
+		pk.setBookId(101);
+		pk.setBookName("spring");
+
+		Book book = new Book("jhon", 500.00, pk);
+
+		 bookRepo.save(book);
+		 
+		 System.out.println("records inserted...");
+
+	}
+	
+	public void getBookDate()
+	{
+		BookPK pk = new BookPK();
+		pk.setBookId(101);
+		pk.setBookName("spring");
+		
+		bookRepo.findById(pk);
+	}
+
+}

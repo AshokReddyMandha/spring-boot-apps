@@ -1,0 +1,15 @@
+package com.ashokit.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity	
+public class Books {
+
+	@Id
+	private Integer bookId;
+	private String bookName;
+	private Double bookPrice;
+	
+		
+}

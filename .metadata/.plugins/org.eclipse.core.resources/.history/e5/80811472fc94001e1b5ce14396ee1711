@@ -1,0 +1,9 @@
+package com.ashokit.entity;
+
+import jakarta.persistence.Entity;
+
+@Entity	
+public class Books {
+
+		
+}
